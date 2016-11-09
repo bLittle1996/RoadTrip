@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RoadTrip</title>
+</head>
+<body>
+  <div id="target"></div>
+</body>
+<script src='cordova.js'></script>
+<script src="public/js/firebase.min.js"></script>
+<script src='public/js/firebase-config.js'></script>
+<script src='public/js/startup.js'></script>
+<script>
+// Initialize Firebase
+
+/*
+let db = firebase.database()
+let ourTree = db.ref('Teams/BestDevelopersNA')
+ourTree.on('value', (snapshot) => {
+  //here we can do anything we want with our data. Anything at all. Anything. You name it. Anything.
+  //this will be called onload once and whenever our data changes. Oops. So reactive shit goes here pal
+  console.log(Object.keys(snapshot.val().TestUsers))
+})
+
+//inital structure?
+//keep it as flat as possible to avoid dieting in the future
+
+{
+  "users": {
+    uuid: {
+      'name': 'Default' //maybe check if a path to a new devices uuid exists, if not, ask for username to get set up.
+    }
+  },
+  "roadtrips": {
+    uid: {
+      user: uuid,
+      name: 'RoadTrip',
+      briefDesc: 'fun much excite',
+      locations: uid,
+      visibility: 'private' || 'public' || 'unlisted'
+    }
+  },
+  "locations": {
+    uid: {
+      uid: { //each uid in locations can have multiple children, because apparently you can go to more than one place or some nonsense.
+        name: 'Pandamonium',
+        desc: 'LOOK AT THE TREES, MAN! THE TREES!',
+        lat: 3.34234134,
+        lng: -34.324,
+        pictures: [
+          'links to s3 or something more free',
+          'links to s3 or something more free, can easily change order by updating the array this object contains'
+        ],
+      }
+    }
+  }
+}
+*/
+
+</script>
+</html>
