@@ -19,7 +19,7 @@ document.addEventListener('deviceready', function () {
       users.update(update);
       window.location.href = 'index.html'; //REMEMBER TO REPLACE - this shouldn't result in redirect loop hopefully
     } else {
-      document.getElementsByClass('error-message')[0].innerHTML = 'Please enter your name!';
+      document.getElementsByClassName('error-message')[0].innerHTML = 'Please enter your name!';
       nameEl.className += ' error';
     }
   }

@@ -12,3 +12,5 @@ firebase.initializeApp(config);
 firebase.auth().signInWithEmailAndPassword("b_littleton2@fanshaweonline.ca", "password").catch(function (error) {
   return console.error(error);
 });
+
+var teamDir = 'Teams/BestDevelopersNA';

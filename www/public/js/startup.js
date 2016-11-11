@@ -12,10 +12,9 @@ document.addEventListener('deviceready', function () {
     console.log(deviceId);
     if (users && Object.keys(users).includes(deviceId)) {
       //already exist in database, has run app before.
-      console.log('is in users', users[deviceId].name);
+      window.location.href = 'home.html';
     } else {
       //let's take them to a registration page
-      console.log('Not in users');
       window.location.href = 'registration.html';
     }
   });

@@ -8,3 +8,5 @@ const config = {
 
 firebase.initializeApp(config)
 firebase.auth().signInWithEmailAndPassword("b_littleton2@fanshaweonline.ca", "password").catch(error => console.error(error) )
+
+const teamDir = 'Teams/BestDevelopersNA'
