@@ -22,7 +22,8 @@ function saveRoadTrip() {
         name: nameText.value,
         desc: descText.value,
         locations: [],
-        publicity: 'private'
+        publicity: 'private',
+        user: device.uuid
       };
       //if the user already has some roadtrips, add it to the array, otherwise make it fresh
       if (user.roadtrips) {
