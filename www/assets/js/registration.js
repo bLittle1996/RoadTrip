@@ -14,8 +14,11 @@ document.addEventListener('deviceready', () => {
       update[userId] = {
         name: name
       }
-      users.update(update)
-      window.location.href = 'index.html' //REMEMBER TO REPLACE - this shouldn't result in redirect loop hopefully
+      users.update(update).then((success) => {
+        window.location.href = 'home.html'
+      }, (error) => {
+        document.getElementsByClassName('error-message')[0].innerHTML = 'Unable to update name!'
+      })
     } else {
       document.getElementsByClassName('error-message')[0].innerHTML = 'Please enter your name!'
       nameEl.className += ' error'

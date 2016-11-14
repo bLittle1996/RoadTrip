@@ -29,10 +29,15 @@ function saveRoadTrip() {
         user.roadtrips = [newKey]
       }
       //update the user in the database, effectively tellig us that hey, this user owns these roadtrips. Also add the roadtrip with the associated key to /roadtrips
-      firebase.database().ref(`${teamDir}/users/${device.uuid}`).update(user)
-      firebase.database().ref(`${teamDir}/roadtrips/${newKey}`).update(newTrip)
-
-      window.location.href = 'home.html'
+      firebase.database().ref(`${teamDir}/users/${device.uuid}`).update(user).then(success => {
+        firebase.database().ref(`${teamDir}/roadtrips/${newKey}`).update(newTrip).then(success => {
+          window.location.href = 'home.html'
+        }, error => {
+          //Errors? ???????????
+        })
+      }, error => {
+        //maybe error stuff here?
+      })
     })
   }
 
