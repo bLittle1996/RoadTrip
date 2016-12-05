@@ -8,7 +8,7 @@ document.addEventListener('deviceready', function () {
       //note that since this is async we'll have to do some extra work to get it in order later on. Probably add each roadtrip to an array and filter based on created timestamps.
       user.roadtrips.forEach(function (roadtrip) {
         firebase.database().ref(teamDir + '/roadtrips/' + roadtrip).once('value', function (trip) {
-          roadtripsDiv.innerHTML += '\n            <div id=\'' + roadtrip + '\' class=\'roadtrip\'>\n              <div class=\'roadtrip-title\'>' + trip.val().name + '</div>\n              <div class=\'roadtrip-desc\'>' + trip.val().desc + '</div>\n              Then a button or some icon to indicate you can click it to view the locations and stuff\n            </div>\n          ';
+          roadtripsDiv.innerHTML += '\n            <div id=\'' + roadtrip + '\' class=\'roadtrip\'>\n              <div class=\'roadtrip-title\'>' + trip.val().name + '</div>\n              <div class=\'roadtrip-desc\'>' + trip.val().desc + '</div>\n              <a href="edit-roadtrip.html?roadtrip=' + roadtrip + '">View RoadTrip</a>\n            </div>\n          ';
         });
       });
     } else {

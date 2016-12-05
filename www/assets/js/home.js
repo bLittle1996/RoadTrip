@@ -10,7 +10,7 @@ document.addEventListener('deviceready', () => {
             <div id='${roadtrip}' class='roadtrip'>
               <div class='roadtrip-title'>${trip.val().name}</div>
               <div class='roadtrip-desc'>${trip.val().desc}</div>
-              Then a button or some icon to indicate you can click it to view the locations and stuff
+              <a href="edit-roadtrip.html?roadtrip=${roadtrip}">View RoadTrip</a>
             </div>
           `
         })

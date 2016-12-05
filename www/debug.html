@@ -8,6 +8,7 @@
 </head>
 <body>
   <pre id='json'></pre>
+  <button onclick="deleteAll()">>> DESTROY ALL <<</button>
 </body>
 <script src='public/js/firebase.min.js'></script>
 <script src='public/js/firebase-config.js'></script>
@@ -20,5 +21,9 @@
       console.log(snapshot.val())
     })
   })()
+
+  function deleteAll() {
+    //do later
+  }
 </script>
 </html>
