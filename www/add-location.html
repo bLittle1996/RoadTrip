@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Add Location</title>
+  <link rel="stylesheet" href="public/css/swiper.min.css">
+</head>
+<body>
+  <div class="">
+    <label for="desc">Enter a description about this location:</label>
+    <textarea id="desc"></textarea>
+  </div>
+
+  <div id="images">
+    <div class="images">
+      <div class="swiper-container">
+        <div id="swiper-wrapper" class="swiper-wrapper">
+          <div id="no-images" class="swiper-slide" style="padding: 3em 0; text-align: center;">Need more images? Click the Add Images button to add images!</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    <button id="openCamera">Add Images</button>
+  </div>
+
+
+  <div class="">
+    <p>Latitude: <span id="lat">calculating...</span></p>
+    <p>Longitude: <span id="lng">calculating...</span></p>
+  </div>
+  <div id="errors"></div>
+  <div class="controls">
+    <button id="submit">Save Location</button>
+  </div>
+</body>
+<style>
+  #swiper-wrapper {
+    width: auto;
+    height: 60vh;
+  }
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+<script src="cordova.js"></script>
+<script src="public/js/swiper.min.js"></script>
+<script src='public/js/firebase.min.js'></script>
+<script src='public/js/firebase-config.js'></script>
+<script src="public/js/add-location.js"></script>
+</html>
