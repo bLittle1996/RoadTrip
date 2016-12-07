@@ -5,25 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="stylesheet" href="public/css/swiper.min.css">
 </head>
 <body>
   <pre id='json'></pre>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+      <div class="swiper-slide" style="text-align:center"><img src="http://www.w3schools.com/css/trolltunga.jpg" alt=""></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+  </div>
+
   <button onclick="deleteAll()">>> DESTROY ALL <<</button>
 </body>
+<script src="public/js/swiper.min.js"></script>
 <script src='public/js/firebase.min.js'></script>
 <script src='public/js/firebase-config.js'></script>
 <script>
-  (() => {
-    const json = document.getElementById('json')
+(() => {
+  const json = document.getElementById('json')
 
-    firebase.database().ref('Teams/BestDevelopersNA').once('value', (snapshot) => {
-      json.innerHTML = JSON.stringify(snapshot.val(), null, 2)
-      console.log(snapshot.val())
-    })
-  })()
+  firebase.database().ref('Teams/BestDevelopersNA').once('value', (snapshot) => {
+    json.innerHTML = JSON.stringify(snapshot.val(), null, 2)
+    console.log(snapshot.val())
+  })
 
-  function deleteAll() {
-    //do later
-  }
+  var swiper = new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          slidesPerView: 1,
+          paginationClickable: true,
+          spaceBetween: 0,
+          loop: true
+  })
+})()
+
+function deleteAll() {
+  //do later
+}
 </script>
 </html>
