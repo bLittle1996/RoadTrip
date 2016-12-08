@@ -5,17 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
+  <link rel="stylesheet" href="public/css/app.min.css">
 </head>
 <body>
-  <header>some sort of menu here, probably hamburger shaped</header>
-  <main>
-    <h1>Your RoadTrips</h1>
+  <header>
+    <h1>RoadTrip</h1>
+    <h3>Your RoadTrips</h3>
+  </header>
+  <div id="content">
     <div id="roadtrips">
       <!-- RoadTrips populated from home.js -->
     </div>
+  </div>
+  <footer>
     <a href="make-roadtrip.html">Create RoadTrip</a>
-  </main>
+  </footer>
 </body>
+<style>
+
+  .roadtrip {
+    display: flex;
+    flex-direction: column;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.15);
+    margin-bottom: 0.5em;
+  }
+
+  .roadtrip-title {
+    text-align: center;
+    font-size: 1.15em;
+    font-weight: bold;
+    padding: 0.3em;
+    padding-bottom: 0;
+  }
+
+  .roadtrip-desc {
+    flex-grow: 1;
+    padding: 0.5em;
+  }
+
+  .roadtrip a {
+    display: block;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.5em 0;
+    background-color: rgb(53, 52, 80);
+    border-radius: 0 0 2px 2px;
+  }
+
+  .roadtrip a:visited {
+    color: white;
+  }
+
+  footer a {
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 0.7em 0;
+    display: block;
+  }
+
+  footer a:visited {
+    color: white;
+  }
+</style>
 <script src='cordova.js'></script>
 <script src="public/js/firebase.min.js"></script>
 <script src='public/js/firebase-config.js'></script>

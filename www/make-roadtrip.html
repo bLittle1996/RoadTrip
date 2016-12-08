@@ -5,16 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RoadTrip | Create</title>
+  <link rel="stylesheet" href="public/css/app.min.css">
 </head>
 <body>
-  <div id="make-roadtrip">
-    <span class='label'>Enter the name of the RoadTrip</span>
-    <input type='text' id='name'>
-    <span class='label'>Enter a brief description about the RoadTrip</span>
-    <input type="text" id='desc'>
-    <div id="errors"></div>
-    <button id='save' onclick='saveRoadTrip()'>Save RoadTrip</button>
+  <header>
+    <h1>RoadTrip</h1>
+    <h3>Create New RoadTrip</h3>
+  </header>
+  <div id="content">
+    <div id="make-roadtrip">
+      <span class='label'>Enter the name of the RoadTrip</span>
+      <input type='text' id='name'>
+      <span class='label'>Enter a brief description about the RoadTrip</span>
+      <input type="text" id='desc'>
+      <div id="errors"></div>
+    </div>
   </div>
+  <footer>
+    <button id='save'>Save RoadTrip</button>
+  </footer>
 </body>
 <script src='cordova.js'></script>
 <script src="public/js/firebase.min.js"></script>

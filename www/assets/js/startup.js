@@ -7,7 +7,6 @@ document.addEventListener('deviceready', () => {
 
   db.child('users').on('value', (snapshot) => {
     const users = snapshot.val()
-    console.log(deviceId);
     if(users && Object.keys(users).includes(deviceId)) {
       //already exist in database, has run app before.
       window.location.href = 'home.html'

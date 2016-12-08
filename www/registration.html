@@ -5,14 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Registration</title>
+  <link rel="stylesheet" href="public/css/app.min.css">
 </head>
 <body>
-  <div>Let's get you setup with RoadTrip, it will only take a few seconds.</div>
-  <div>All we need to get you setup and ready to start storing your adventures is one thing, your name.</div>
-  <input id='name' type='text'></input>
-  <button id='submit'>Submit</button>
-  <div class="error-message"></div>
+  <header>
+    <h1>RoadTrip</h1>
+    <h3>Registration</h3>
+  </header>
+  <div id="content">
+    <div>Let's get you setup with RoadTrip, it will only take a few seconds.</div>
+    <div>All we need to get you setup and ready to start storing your adventures is one thing, your name.</div>
+    <input id='name' type='text'></input>
+    <div class="error-message"></div>
+  </div>
+  <footer>
+    <button id='submit'>Submit</button>
+  </footer>
 </body>
+<style>
+#content div {
+  padding-bottom: 0.3em;
+}</style>
 <script src='cordova.js'></script>
 <script src='public/js/firebase.min.js'></script>
 <script src='public/js/firebase-config.js'></script>
