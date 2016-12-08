@@ -12,7 +12,7 @@ document.addEventListener('deviceready', () => {
           <div class="location">
           <div class="desc">${loc.val().desc}</div>
           <div class="image-count">${loc.val().images ? loc.val().images.length : 0} Images</div>
-          <a href="view-location.html?location=${location}">View (Not in)</a>
+          <a href="#view-location.html?location=${location}">View (Not in)</a>
           </div>
           `
         })

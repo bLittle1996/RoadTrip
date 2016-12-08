@@ -6,9 +6,7 @@ document.addEventListener('deviceready', function () {
     spaceBetween: 10,
     centeredSlides: true,
     pagination: '.swiper-pagination',
-    slidesPerView: 'auto',
-    paginationClickable: true,
-    loop: true
+    paginationClickable: true
   });
   var roadtripId = window.location.search.substring(1).split('=')[1];
   var camButton = document.getElementById('openCamera');

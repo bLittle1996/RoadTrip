@@ -5,16 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>RoadTrip | Edit</title>
+  <link rel="stylesheet" href="public/css/app.min.css">
 </head>
 <body>
-  <div id="target">
-    <h2><span id='roadtrip-name'></span> Locations:</h2>
+  <header>
+    <h1>RoadTrip</h1>
+    <h3><span id='roadtrip-name'>RoadTrip</span> Locations</h3>
+  </header>
+  <div id="content">
     <div id="locations">
 
     </div>
-    <a id="add-location" href="">Add Location</a>
   </div>
+  <footer>
+    <a id="add-location" href="">Add Location</a>
+  </footer>
 </body>
+<style>
+.location {
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  box-shadow: 0 0 1px 1px rgba(0,0,0,0.15);
+  margin-bottom: 0.5em;
+}
+
+.location .desc {
+  flex-grow: 1;
+  padding: 0.5em;
+}
+.location .image-count {
+  align-self: center;
+  padding-bottom: 0.5em;
+}
+
+.location a {
+  display: block;
+  width: 100%;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5em 0;
+  background-color: rgb(53, 52, 80);
+  border-radius: 0 0 2px 2px;
+}
+</style>
 <script src='cordova.js'></script>
 <script src="public/js/firebase.min.js"></script>
 <script src='public/js/firebase-config.js'></script>

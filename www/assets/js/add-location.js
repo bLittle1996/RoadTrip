@@ -6,9 +6,7 @@ document.addEventListener('deviceready', () => {
     spaceBetween: 10,
     centeredSlides: true,
     pagination: '.swiper-pagination',
-    slidesPerView: 'auto',
     paginationClickable: true,
-    loop: true
   })
   const roadtripId = window.location.search.substring(1).split('=')[1]
   const camButton = document.getElementById('openCamera')
