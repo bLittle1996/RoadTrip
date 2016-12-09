@@ -5,6 +5,7 @@ document.addEventListener('deviceready', () => {
   submitBtn.addEventListener('click', onSubmit)
 
   function onSubmit() {
+    
     const name = document.getElementById('name').value
     const userId = device.uuid
     const users = firebase.database().ref('Teams/BestDevelopersNA/users')
