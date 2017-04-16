@@ -1,5 +1,5 @@
 const config = {
-  apiKey: "AIzaSyD6uonrdf1rL8nC3aiRfUa14zUqYra2es8",
+  apiKey: "ACHOOOO",
   authDomain: "roadtrip-1d5b1.firebaseapp.com",
   databaseURL: "https://roadtrip-1d5b1.firebaseio.com",
   storageBucket: "roadtrip-1d5b1.appspot.com",
